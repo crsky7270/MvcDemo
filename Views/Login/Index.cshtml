@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "登陆页";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/Login.css" rel="stylesheet" />
+<div class="container" ng-app="LoginApp">
+
+    <form class="form-signin" ng-controller="LoginController">
+        <h2 class="form-signin-heading">请登录</h2>
+        <label for="inputEmail" class="sr-only">电子邮件</label>
+        <input type="email" id="inputEmail" ng-model="email" class="form-control" placeholder="请输入电子邮件地址" required autofocus>
+
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" ng-model="password" id="inputPassword" class="form-control" placeholder="请输入密码" required>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me">记住邮件地址
+            </label>
+        </div>
+        <button id="btnLogin" ng-click="log()" class="btn btn-lg btn-primary btn-block" type="submit">登   陆</button>
+    </form>
+
+</div> <!-- /container -->
+<script src="~/Scripts/Login.js"></script>
+<script src="~/Scripts/Login.Controller.js"></script>
